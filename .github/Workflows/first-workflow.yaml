@@ -1,21 +1,22 @@
-name : My First Github Actions repo code
 
-on: 
- push:
-   branches:
-     - main
+name: My First GitHub Actions Workflow
 
-jobs: 
+on:
+  push:
+    branches:
+      - main
+
+jobs:
   first-job:
     runs-on: ubuntu-latest
 
-    steps: 
-    -name: Print Welcome Message
-    run: echo "Heyyy! Today is Virat's birthday"
+    steps:
+      - name: Print Welcome Message
+        run: echo "Heyyy! Today is Virat's birthday"
 
-    -name: Today's Date
-    run: Date
+      - name: Today's Date
+        run: date
 
-    -name: Check System info
-    run: uname -a
+      - name: Check System Info
+        run: uname -a
 
